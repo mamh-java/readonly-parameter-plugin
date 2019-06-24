@@ -1,4 +1,4 @@
-package com.wangyin.ams.cms.abs.ParaReadOnly;
+package com.mage.readonly;
 
 import net.sf.json.JSONObject;
 
@@ -10,7 +10,7 @@ import hudson.model.ParameterDefinition;
 import hudson.model.ParameterValue;
 
 
-public class WReadonlyTextParameterDefinition extends ParameterDefinition {
+public class ReadonlyStringParameterDefinition extends ParameterDefinition {
 
     private static final long serialVersionUID = 8296806777255584941L;
     private String defaultValue;
@@ -24,7 +24,7 @@ public class WReadonlyTextParameterDefinition extends ParameterDefinition {
     }
 
     @DataBoundConstructor
-    public WReadonlyTextParameterDefinition(String name, String defaultValue, String description) {
+    public ReadonlyStringParameterDefinition(String name, String defaultValue, String description) {
         super(name, description);
         this.defaultValue = defaultValue;
     }
@@ -33,13 +33,13 @@ public class WReadonlyTextParameterDefinition extends ParameterDefinition {
     public static class DescriptorImpl extends ParameterDescriptor {
         @Override
         public String getDisplayName() {
-            return "Readonly Text Parameter";
+            return "Readonly String Parameter";
         }
     }
 
     @Override
-    public WReadonlyTextParameterValue getDefaultParameterValue() {
-        WReadonlyTextParameterValue v = new WReadonlyTextParameterValue(getName(), defaultValue, getDescription());
+    public ReadonlyStringParameterValue getDefaultParameterValue() {
+        ReadonlyStringParameterValue v = new ReadonlyStringParameterValue(getName(), defaultValue, getDescription());
         return v;
     }
 
@@ -51,15 +51,15 @@ public class WReadonlyTextParameterDefinition extends ParameterDefinition {
         } else if (value.length != 1) {
             throw new IllegalArgumentException("Illegal number of parameter values for " + getName() + ": " + value.length);
         } else {
-            return new WReadonlyTextParameterValue(getName(), value[0], getDescription());
+            return new ReadonlyStringParameterValue(getName(), value[0], getDescription());
         }
     }
 
 
     public ParameterValue createValue(StaplerRequest req, JSONObject jo) {
-        WReadonlyTextParameterValue value = req.bindJSON(WReadonlyTextParameterValue.class, jo);
+        ReadonlyStringParameterValue value = req.bindJSON(ReadonlyStringParameterValue.class, jo);
         value.setDescription(getDescription());
         return value;
     }
-    
+
 }

@@ -12,9 +12,9 @@
     </parent>
 
     <artifactId>readonly-parameters</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2</version>
     <packaging>hpi</packaging>
-    <name>Readonly Parameter plugin</name>
+    <name>Readonly++ Parameter plugin</name>
     <description>Integrates Jenkins to build with readonly parameter</description>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/Readonly+Parameter+Plugin</url>
 
@@ -27,13 +27,13 @@
     </licenses>
 
     <organization>
-        <name>wangyin</name>
-        <url>www.wangyin.com</url>
+        <name>mage</name>
+        <url>https://shop592330910.taobao.com</url>
     </organization>
     <developers>
         <developer>
-            <id>wy-scm</id>
-            <name>wy-scm</name>
+            <id>mage</id>
+            <name>mage https://shop592330910.taobao.com</name>
         </developer>
     </developers>
 
