@@ -2,6 +2,6 @@
    xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form"
    xmlns:i="jelly:fmt" xmlns:p="/lib/hudson/project">
     <f:entry title="${it.name}" description="${it.description}">
-      <f:textarea name="value" value="${it.value}" readonly="true" />
+      <f:textbox name="value" value="${it.value}" readonly="true"/>
     </f:entry>
 </j:jelly>
