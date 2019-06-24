@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>plugin</artifactId>
+        <version>3.5</version>
+        <relativePath />
+    </parent>
+
+    <artifactId>readonly-parameters</artifactId>
+    <version>1.0.2</version>
+    <packaging>hpi</packaging>
+    <name>Readonly++ Parameter plugin</name>
+    <description>Integrates Jenkins to build with readonly parameter</description>
+    <url>https://wiki.jenkins-ci.org/display/JENKINS/Readonly+Parameter+Plugin</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://opensource.org/licenses/MIT</url>
+            <comments>All source code is under the MIT license.</comments>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>mage</name>
+        <url>https://shop592330910.taobao.com</url>
+    </organization>
+    <developers>
+        <developer>
+            <id>mage</id>
+            <name>mage https://shop592330910.taobao.com</name>
+        </developer>
+    </developers>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jenkins-ci.tools</groupId>
+                <artifactId>maven-hpi-plugin</artifactId>
+                <configuration>
+                    <pluginFirstClassLoader>true</pluginFirstClassLoader>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <scm>
+        <connection>scm:git:git://github.com/jenkinsci/readonly-parameter-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:jenkinsci/readonly-parameter-plugin.git
+        </developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <properties>
+        <jenkins.version>2.176.1</jenkins.version>
+        <java.level>8</java.level>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+
+</project>
