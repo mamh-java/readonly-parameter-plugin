@@ -12,7 +12,7 @@
     </parent>
 
     <artifactId>readonly-parameters</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.1</version>
     <packaging>hpi</packaging>
     <name>Readonly++ Parameter plugin</name>
     <description>Integrates Jenkins to build with readonly parameter</description>
